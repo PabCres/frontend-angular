@@ -9,7 +9,7 @@ export class MessageService {
   	constructor(private _http: HttpClient) { }
 
   	sendMessage(body) {
-    	return this._http.post('https://nodeapi-losabuelos.herokuapp.com/contact', body);
+    	return this._http.post('localhost:3000/api/contact', body);
   	}
 
 }

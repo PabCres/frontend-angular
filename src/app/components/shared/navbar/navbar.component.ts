@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
 
 	isAuthenticated:boolean;
 
-  constructor(private Auth: AuthService, private router: Router) {
+  	constructor(private Auth: AuthService, private router: Router) {
 		this.Auth.logged()
 	    .subscribe(data => {
 				if (data.success) {

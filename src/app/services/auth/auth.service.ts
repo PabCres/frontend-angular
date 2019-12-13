@@ -9,7 +9,7 @@ import { map } from 'rxjs/operators';
 })
 export class AuthService {
 
-	usersUrl: string = 'https://nodeapi-losabuelos.herokuapp.com';
+	usersUrl: string = 'localhost:3000/api';
 
 	user:any = {};
 
@@ -34,7 +34,7 @@ export class AuthService {
   }
 
   logged() {
-    return this.http.get('/user', { withCredentials: true })
+    return this.http.get(this.usersUrl + '/user', { withCredentials: true })
     .pipe(map((res: any) => {
         this.user = res;
         return this.user;

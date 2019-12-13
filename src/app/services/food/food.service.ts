@@ -12,7 +12,7 @@ export class FoodService {
 
   food:any={}
 
-	foodsUrl: string = 'https://nodeapi-losabuelos.herokuapp.com';
+	foodsUrl: string = 'localhost:3000/api';
 
   	constructor(private http: HttpClient) { }
 
